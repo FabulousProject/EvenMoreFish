@@ -67,6 +67,7 @@ public class EvenMoreFish extends JavaPlugin {
 
     public static final int METRIC_ID = 11054;
 
+    @Override
     public void onEnable() {
 
         fishFile = new FishFile(this);
@@ -121,8 +122,6 @@ public class EvenMoreFish extends JavaPlugin {
         wgPlugin = getWorldGuard();
         checkPapi();
 
-        Metrics metrics = new Metrics(this, METRIC_ID);
-
         if (EvenMoreFish.mainConfig.isDatabaseOnline()) {
 
             // Attempts to connect to the database if enabled
@@ -136,14 +135,15 @@ public class EvenMoreFish extends JavaPlugin {
 
         }
 
-        getServer().getLogger().log(Level.INFO, "EvenMoreFish by Oheers : Enabled");
+        getServer().getLogger().log(Level.INFO, "EvenMoreFish by Oheers & Alpho320 : Enabled");
 
     }
 
+    @Override
     public void onDisable() {
 
         terminateSellGUIS();
-        getServer().getLogger().log(Level.INFO, "EvenMoreFish by Oheers : Disabled");
+        getServer().getLogger().log(Level.INFO, "EvenMoreFish by Oheers & Alpho320 : Disabled");
 
     }
 

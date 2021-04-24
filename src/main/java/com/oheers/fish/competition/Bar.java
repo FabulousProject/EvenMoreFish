@@ -77,7 +77,7 @@ public class Bar {
         }
 
         // Remaining seconds to always show, e.g. "1 minutes and 0 seconds left" and "5 seconds left"
-        returning += (timeLeft%60) + EvenMoreFish.msgs.getBarSecond() + " left";
+        returning += (timeLeft%60) + EvenMoreFish.msgs.getBarSecond() + " kaldı";
 
         bar.setTitle(returning);
     }
